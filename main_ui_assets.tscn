@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://k3lhkpy1tcex"]
+
+[ext_resource type="Script" uid="uid://db2t4kdcvxdl3" path="res://src/UI_Main/Main_Menu_Script.gd" id="1_gaky4"]
+[ext_resource type="Texture2D" uid="uid://drc5i240ghrlx" path="res://assets/Main Menu BG.jpg" id="2_dtghs"]
+[ext_resource type="Texture2D" uid="uid://iw41oqrh4623" path="res://assets/START.png" id="3_beu36"]
+[ext_resource type="Texture2D" uid="uid://c84epq4dn2l4p" path="res://assets/QUIT.png" id="4_alnys"]
+[ext_resource type="Texture2D" uid="uid://bns6rmsp1s0ne" path="res://assets/LOGO.png" id="5_lp0lw"]
+
+[node name="Main_UI_Assets" type="Node2D" unique_id=1332238169]
+script = ExtResource("1_gaky4")
+
+[node name="Menu_control" type="Control" parent="." unique_id=935302289]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MainMenuBg" type="Sprite2D" parent="Menu_control" unique_id=1002158991]
+position = Vector2(580.00006, 331.99997)
+scale = Vector2(0.5958333, 0.59999996)
+texture = ExtResource("2_dtghs")
+
+[node name="Start" type="Button" parent="Menu_control" unique_id=1594722982]
+layout_mode = 0
+offset_left = 478.27484
+offset_top = 446.7507
+offset_right = 670.27484
+offset_bottom = 503.1507
+text = "Start "
+
+[node name="Start2" type="Sprite2D" parent="Menu_control/Start" unique_id=1254842959]
+position = Vector2(95.59399, 26.083063)
+scale = Vector2(1.126882, 1.370588)
+texture = ExtResource("3_beu36")
+
+[node name="Quit" type="Button" parent="Menu_control" unique_id=950068878]
+layout_mode = 0
+offset_left = 469.60004
+offset_top = 516.9414
+offset_right = 669.36005
+offset_bottom = 578.0614
+text = "Quit 
+"
+
+[node name="Quit2" type="Sprite2D" parent="Menu_control/Quit" unique_id=2061896220]
+position = Vector2(103.75995, 28.650227)
+scale = Vector2(1.1268816, 1.2696089)
+texture = ExtResource("4_alnys")
+
+[node name="Logo" type="Sprite2D" parent="Menu_control" unique_id=1184669477]
+position = Vector2(570.8917, 214.80382)
+texture = ExtResource("5_lp0lw")
+
+[connection signal="pressed" from="Menu_control/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu_control/Quit" to="." method="_on_quit_pressed"]
