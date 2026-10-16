@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bixhix0yy7lcr"]
+
+[ext_resource type="Texture2D" uid="uid://cs6tjr4jsc1xf" path="res://assets/patintero bg.png" id="1_jwy5c"]
+[ext_resource type="Script" uid="uid://c4of6h66fy76u" path="res://src/Actors/PatinteroPlayer.gd" id="2_vvtmx"]
+[ext_resource type="Texture2D" uid="uid://bl4stwcbyox4h" path="res://assets/topdownpov.png" id="3_sokoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2y80a"]
+size = Vector2(54.30481, 91.572784)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtnub"]
+size = Vector2(1122.8269, 12.004089)
+
+[node name="Patintero" type="Node2D" unique_id=630913231]
+
+[node name="PatinteroBg" type="Sprite2D" parent="." unique_id=309618366]
+position = Vector2(577.62976, 322.7229)
+scale = Vector2(0.59968024, 0.6008406)
+texture = ExtResource("1_jwy5c")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1128492415]
+script = ExtResource("2_vvtmx")
+
+[node name="Topdownpov" type="Sprite2D" parent="Player" unique_id=531245177]
+position = Vector2(167.83128, 186.44511)
+scale = Vector2(3.9240742, 4.1329365)
+texture = ExtResource("3_sokoh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=392618711]
+position = Vector2(170.90755, 182.96228)
+shape = SubResource("RectangleShape2D_2y80a")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1051829421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2064687351]
+position = Vector2(573.7068, 309.42987)
+shape = SubResource("RectangleShape2D_jtnub")
