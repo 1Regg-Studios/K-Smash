@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bcp16p3s7fr53"]
+
+[ext_resource type="Texture2D" uid="uid://be5paq6xwuc8r" path="res://assets/Tug Of War BG.png" id="1_oq5of"]
+[ext_resource type="Script" uid="uid://q1rhm287go7g" path="res://src/Actors/Player.gd" id="2_hosf4"]
+[ext_resource type="Texture2D" uid="uid://cjsdljcjrsog7" path="res://assets/Character_transparent.png" id="3_qyr6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtnub"]
+size = Vector2(80, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7j83"]
+size = Vector2(1141.5, 339.5)
+
+[node name="TugOfWar" type="Node2D" unique_id=1417092844]
+
+[node name="TugOfWarBg" type="Sprite2D" parent="." unique_id=678647554]
+position = Vector2(576, 356.99994)
+scale = Vector2(0.59999996, 0.6722223)
+texture = ExtResource("1_oq5of")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1983290370]
+script = ExtResource("2_hosf4")
+speed = null
+gravity = null
+
+[node name="CharacterTransparent" type="Sprite2D" parent="Player" unique_id=1847121262]
+position = Vector2(112, 232)
+scale = Vector2(0.21899225, 0.20348835)
+texture = ExtResource("3_qyr6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=237036138]
+position = Vector2(112, 232)
+shape = SubResource("RectangleShape2D_jtnub")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1285116749]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=169348488]
+position = Vector2(568, 454.25)
+shape = SubResource("RectangleShape2D_l7j83")
