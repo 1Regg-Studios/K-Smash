@@ -1,0 +1,419 @@
+[gd_scene format=3 uid="uid://uitgbb44x4ej"]
+
+[ext_resource type="Script" uid="uid://cht12jg32s0ex" path="res://src/UI/rdyplyr/ready_selection.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bue37fpsuj37i" path="res://assets/Main Menu UI/Main Menu BG.jpg" id="2_bg"]
+[ext_resource type="PackedScene" uid="uid://1wbul62s3wc4" path="res://src/UI/sound_button/sound_button.tscn" id="3_soundbtn"]
+[ext_resource type="Texture2D" uid="uid://0f0ldub707b7" path="res://assets/Character Select/P1.png" id="4_p1"]
+[ext_resource type="Texture2D" uid="uid://dbutlcf5oi2ac" path="res://assets/Character Select/P2.png" id="5_p2"]
+[ext_resource type="Texture2D" uid="uid://buc0eax23ummt" path="res://assets/Character Select/P3.png" id="6_p3"]
+[ext_resource type="Texture2D" uid="uid://b3g78q2rpoxxn" path="res://assets/Character Select/P4.png" id="7_p4"]
+[ext_resource type="Texture2D" uid="uid://ds6axdvyuvpng" path="res://assets/Character Select/placeholder.png" id="8_placeholder"]
+[ext_resource type="Texture2D" uid="uid://dfkltaaimqow3" path="res://assets/Character Select/PRESS THE KEY TO GET READY.png" id="9_prompt"]
+[ext_resource type="Texture2D" uid="uid://cs7dfrr1l7si5" path="res://assets/Character Select/BOX.png" id="10_box"]
+
+[node name="ReadySelection" type="Control" unique_id=1433569334]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2012436312]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Prompt" type="TextureRect" parent="." unique_id=1340121278]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = 218.0
+offset_right = 174.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_prompt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Player1" type="Control" parent="." unique_id=1385472827]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -415.0
+offset_top = -188.0
+offset_right = -275.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Portrait" type="Control" parent="Player1" unique_id=2037307815]
+modulate = Color(0.6, 0.48, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerLabel" type="TextureRect" parent="Player1/Portrait" unique_id=237914113]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 53.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("4_p1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Character" type="TextureRect" parent="Player1/Portrait" unique_id=1391130185]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 77.0
+offset_right = 51.0
+offset_bottom = 287.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("8_placeholder")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Box" type="TextureRect" parent="Player1" unique_id=1376943162]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 307.0
+offset_right = 23.0
+offset_bottom = 353.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("10_box")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Key" type="Label" parent="Player1" unique_id=1149062056]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 357.0
+offset_right = 70.0
+offset_bottom = 387.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "A"
+horizontal_alignment = 1
+
+[node name="Player2" type="Control" parent="." unique_id=1676360331]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -188.0
+offset_right = -45.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Portrait" type="Control" parent="Player2" unique_id=1713888979]
+modulate = Color(0.6, 0.48, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerLabel" type="TextureRect" parent="Player2/Portrait" unique_id=929277155]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 53.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("5_p2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Character" type="TextureRect" parent="Player2/Portrait" unique_id=627771119]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 77.0
+offset_right = 51.0
+offset_bottom = 287.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("8_placeholder")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Box" type="TextureRect" parent="Player2" unique_id=312156829]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 307.0
+offset_right = 23.0
+offset_bottom = 353.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("10_box")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Key" type="Label" parent="Player2" unique_id=160247763]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 357.0
+offset_right = 70.0
+offset_bottom = 387.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "F"
+horizontal_alignment = 1
+
+[node name="Player3" type="Control" parent="." unique_id=1332568754]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -188.0
+offset_right = 185.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Portrait" type="Control" parent="Player3" unique_id=129288397]
+modulate = Color(0.6, 0.48, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerLabel" type="TextureRect" parent="Player3/Portrait" unique_id=664203722]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 53.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("6_p3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Character" type="TextureRect" parent="Player3/Portrait" unique_id=666304526]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 77.0
+offset_right = 51.0
+offset_bottom = 287.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("8_placeholder")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Box" type="TextureRect" parent="Player3" unique_id=86337896]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 307.0
+offset_right = 23.0
+offset_bottom = 353.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("10_box")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Key" type="Label" parent="Player3" unique_id=1282281280]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 357.0
+offset_right = 70.0
+offset_bottom = 387.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "J"
+horizontal_alignment = 1
+
+[node name="Player4" type="Control" parent="." unique_id=747534734]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 275.0
+offset_top = -188.0
+offset_right = 415.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Portrait" type="Control" parent="Player4" unique_id=62383172]
+modulate = Color(0.6, 0.48, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerLabel" type="TextureRect" parent="Player4/Portrait" unique_id=1475456087]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 53.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("7_p4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Character" type="TextureRect" parent="Player4/Portrait" unique_id=1776313243]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 77.0
+offset_right = 51.0
+offset_bottom = 287.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("8_placeholder")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Box" type="TextureRect" parent="Player4" unique_id=1623810865]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = 307.0
+offset_right = 23.0
+offset_bottom = 353.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("10_box")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Key" type="Label" parent="Player4" unique_id=2069482955]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 357.0
+offset_right = 70.0
+offset_bottom = 387.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = ";"
+horizontal_alignment = 1
+
+[node name="MuteButton" parent="." unique_id=1370304727 instance=ExtResource("3_soundbtn")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="Fade" type="ColorRect" parent="." unique_id=549448509]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

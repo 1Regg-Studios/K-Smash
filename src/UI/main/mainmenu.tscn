@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c2r246x5s6ine"]
+
+[ext_resource type="Script" uid="uid://b3ko7uieua22u" path="res://src/UI/main/main_menu.gd" id="1_0hcon"]
+[ext_resource type="Texture2D" uid="uid://bue37fpsuj37i" path="res://assets/Main Menu UI/Main Menu BG.jpg" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://crp1bxupvlvx0" path="res://assets/Main Menu UI/LOGO.png" id="3_q2dyr"]
+[ext_resource type="Texture2D" uid="uid://d2wgdbq0p4ryb" path="res://assets/Main Menu UI/START.png" id="4_2nle4"]
+[ext_resource type="Texture2D" uid="uid://cejx4g4omwkpq" path="res://assets/Main Menu UI/START White.png" id="5_50o3v"]
+[ext_resource type="Texture2D" uid="uid://byvswrsch5mks" path="res://assets/Main Menu UI/QUIT.png" id="6_rtqnl"]
+[ext_resource type="Texture2D" uid="uid://fdk7xbqhv3ek" path="res://assets/Main Menu UI/QUIT White.png" id="7_cdi1a"]
+[ext_resource type="PackedScene" uid="uid://1wbul62s3wc4" path="res://src/UI/sound_button/sound_button.tscn" id="8_soundbtn"]
+
+[node name="Control" type="Control" unique_id=783738536]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0hcon")
+
+[node name="background" type="TextureRect" parent="." unique_id=1092501485]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Logo" type="TextureRect" parent="." unique_id=197051134]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -210.0
+offset_right = 259.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_q2dyr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="START" type="TextureButton" parent="." unique_id=1562216219]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = 64.5
+offset_right = 68.0
+offset_bottom = 115.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("4_2nle4")
+texture_hover = ExtResource("5_50o3v")
+
+[node name="QUIT" type="TextureButton" parent="." unique_id=448398820]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = 155.5
+offset_right = 68.0
+offset_bottom = 206.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("6_rtqnl")
+texture_hover = ExtResource("7_cdi1a")
+
+[node name="MuteButton" parent="." unique_id=1018241314 instance=ExtResource("8_soundbtn")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1298872723]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="START" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]

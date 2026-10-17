@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1wbul62s3wc4"]
+
+[ext_resource type="Script" uid="uid://clmwvvamcjlvw" path="res://src/UI/sound_button/sound_button.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bt58ymsvrgmdh" path="res://assets/Sound UI/SOUND ON.png" id="2_soundon"]
+[ext_resource type="Texture2D" uid="uid://d4jmolce3iqn0" path="res://assets/Sound UI/MUTE.png" id="3_mute"]
+
+[node name="SoundButton" type="TextureButton" unique_id=1469617116]
+texture_filter = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -76.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("3_mute")
+texture_pressed = ExtResource("2_soundon")
+script = ExtResource("1_script")
