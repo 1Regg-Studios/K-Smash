@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://csffilwrx7w87"]
+
+[ext_resource type="PackedScene" uid="uid://cek7d54635s5c" path="res://MiniGames/Main Game File/player_scene.tscn" id="1_1tn8g"]
+[ext_resource type="Texture2D" uid="uid://be5paq6xwuc8r" path="res://MiniGames/Art Assets/Tug Of War BG.png" id="1_ky2gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtnub"]
+size = Vector2(1121.5, 84.5)
+
+[node name="TugOfwar" type="Node2D" unique_id=623005286]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=33482416]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TugOfWarBg" type="Sprite2D" parent="TextureRect" unique_id=271934019]
+position = Vector2(590.75, 315.25)
+scale = Vector2(0.60026044, 0.59398144)
+texture = ExtResource("1_ky2gl")
+
+[node name="PlayerScene" parent="." unique_id=374640963 instance=ExtResource("1_1tn8g")]
+position = Vector2(382, 164)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1875231761]
+position = Vector2(592, 316)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=919169062]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1438509171]
+position = Vector2(591.25, 429.75)
+shape = SubResource("RectangleShape2D_jtnub")

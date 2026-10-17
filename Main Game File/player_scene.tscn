@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cek7d54635s5c"]
+
+[ext_resource type="Texture2D" uid="uid://b0hrr3lksg0fj" path="res://MiniGames/Art Assets/tugging animation.png" id="1_3jpew"]
+[ext_resource type="Script" uid="uid://b5ua36b66s2ih" path="res://MiniGames/Main Game File/player.gd" id="1_dp1cy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp1cy"]
+atlas = ExtResource("1_3jpew")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rndwy"]
+atlas = ExtResource("1_3jpew")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj5si"]
+atlas = ExtResource("1_3jpew")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtu1l"]
+atlas = ExtResource("1_3jpew")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihs2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp1cy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rndwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj5si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtu1l")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ihs2j"]
+radius = 40.261642
+
+[node name="PlayerScene" type="Node2D" unique_id=374640963]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=239548244]
+script = ExtResource("1_dp1cy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=303038650]
+position = Vector2(127.00003, 105)
+scale = Vector2(2.9375002, 2.09375)
+sprite_frames = SubResource("SpriteFrames_ihs2j")
+autoplay = "default"
+frame_progress = 0.67007047
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=456655681]
+position = Vector2(124, 108)
+shape = SubResource("CircleShape2D_ihs2j")
