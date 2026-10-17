@@ -89,10 +89,14 @@ texture_normal = ExtResource("6_rtqnl")
 texture_hover = ExtResource("7_cdi1a")
 
 [node name="MuteButton" parent="." unique_id=1018241314 instance=ExtResource("8_soundbtn")]
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1
+offset_left = -86.0
+offset_top = -84.0
+offset_right = -28.0
+offset_bottom = -32.0
 
 [node name="Fade" type="ColorRect" parent="." unique_id=1298872723]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
