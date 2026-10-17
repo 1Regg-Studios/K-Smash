@@ -1,0 +1,8 @@
+# opencode / AI tooling
+opencode.json
+INDEX.md
+CODE_EXPLAINED.md
+
+# Godot generated files
+.godot/
+*.tmp
